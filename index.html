@@ -125,9 +125,9 @@
          <p class="text-[16px] text-[#03071299] font-ral font-normal ">Coach-009-WEB ! AC_Business</p>
       </div>
      </div>
-      <div>
-       <button class="btn btn-primary bg-[#88e67ad1] text-[#1DD100] text-[20px] font-ral border-solid border-[2px] border-[#1DD100]">
-        <img src="images/seat-green.png" alt=""> <span></span> <p class="text-[18px]">Seats left</p>
+      <div class="flex items-center">
+       <button class="btn btn-primary bg-[#1DD10026] text-[#1DD100] text-[20px] font-ral border-solid border-[2px] border-[#1DD100]">
+        <img src="images/seat-green.png" alt=""> <span id="seat-left" class="text-black">8</span> <p class="text-[18px]">Seats left</p>
        </button>
       </div>
   </div>
@@ -178,63 +178,70 @@
    </div>
   </div>
   <!-- seat -->
-  <div class="grid grid-cols-5 items-center gap-x-8 gap-y-6 mt-6" >
-  <div id="a"class=" text-center text-[#03071280]">A</div>
-  <div id="a"class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl">A1</div>
-  <div id="a"class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl">A2</div>
-  <div id="a"class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl">A3</div>
-  <div id="a"class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl">A4</div>
-  <div id="a"class="text-center text-[#03071280]">B</div>
-  <div id="a"class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl">B1</div>
-  <div id="a"class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl">B2</div>
-  <div id="a"class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl">B3</div>
-  <div id="a"class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl">B4</div>
+  <div id="button-container" class="grid grid-cols-5 items-center gap-x-8 gap-y-6 mt-6" >
+  <div class=" text-center text-[#03071280]">A</div>
+  <div  class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl a">A1</div>
+  <div  class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl a">A2</div>
+  <div  class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl a">A3</div>
+  <div  class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl a">A4</div>
+  <div  class="text-center text-[#03071280]">B</div>
+  <div  class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl a">B1</div>
+  <div  class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl a">B2</div>
+  <div  class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl a">B3</div>
+  <div  class="bg-[#F7F8F8] max-w-[150px] text-center text-[#03071280]  p-3 rounded-xl a">B4</div>
   </div>
  </div>
 <!-- second part -->
-  <div>
+  <div class="max-w-[600px]" >
    <h1 class="text-[#030712] text-2xl font-ral font-semibold">Select Your Seat</h1>
-   <div class="max-w-[433px] mx-auto bg-[#F7F8F8] flex justify-between gap-20 p-9 rounded-xl">
-    <div>
-     <h3>Seat</h3>
-     <p>A1</p>
-     <p>A2</p>
-     <p>A3</p>
-    </div>
-    <div>
-     <h3>Class</h3>
-     <p>Economy</p>
-     <p>Economy</p>
-     <p>Economy</p>
-    </div>
-    <div>
-     <h3>Fare</h3>
-     <p>550</p>
-     <p>550</p>
-     <p>550</p>
-    </div>
-   
-   </div>
-   <div class="flex justify-between">
-    <h4>Total price</h4>
-    <p>1650</p>
+   <table class="border-[1px] w-[433px] ">
+    <tr>
+     <td>Seat <span id="seat-increase">0</span></td>
+     <td>class</td>
+     <td>Price</td>
+    </tr>
+    <tr>
+      <td>A1</td>
+      <td>Economy</td>
+      <td>550</td>
+    </tr>
+    <tr>
+      <td>A2</td>
+      <td>Economy</td>
+      <td>550</td>
+    </tr>
+    <tr>
+      <td>A3</td>
+      <td>Economy</td>
+      <td>550</td>
+    </tr>
+    <tr>
+      <td>A4</td>
+      <td>Economy</td>
+      <td>550</td>
+    </tr>
+   </table>
+
+   <div class="flex  justify-between mt-10">
+     <p>total number</p>
+     <span id="price">0</span>
    </div>
 
   <!-- input -->
-  <div class="border mt-10 flex rounded bg-[#FFFFFF] w-96">
-   <input class=" bg-transparent px-4 py-1 outline-none text-black " placeholder="have a coupon?" type="text" name="" id="" > 
-   <button class="m-2 rounded bg-[#1DD100] px-4 py-2 text-white">Apply</button>
+  <div id="delete-div" class="border mt-10 rounded-xl bg-[#FFFFFF] w-96 ">
+   <input  class=" px-4 py-1 outline-none text-black " placeholder="have a coupon?" type="text" name="" id="delete-text" > 
+   <button id="apply-button" class=" btn m-2 rounded bg-[#1DD100] px-4 py-2 text-white" disabled>Apply</button>
   </div>
 
   <!-- grand total -->
-  <div class="flex justify-between">
+  <div class="flex justify-between mt-4">
    <h1>Grand Total</h1>
-   <p>0</p>
+   <p id="total-price">0</p>
   </div>
+
+  <button class="btn w-full bg-[#1DD100] mt-6">Next</button>
   </div>
 </div>
-
-
  </section>
 
 </main>
@@ -253,6 +260,7 @@
    </div>
  </nav>
 </footer>
-
+<!-- js -->
+<script src="script/index.js"></script>
 </body>
 </html>
