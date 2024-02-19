@@ -5,14 +5,11 @@ document.getElementById('call').addEventListener('click', function(){
 })
 
 
-
-
 // coupon part //
 
 document.getElementById('delete-text').addEventListener('keyup', function(event){
  const text = event.target.value ;
  const deleteButton = document.getElementById('apply-button') ;
-
 
  if(text === 'NEW15' || text === 'Couple 20'){
    deleteButton.removeAttribute('disabled'); 
@@ -20,8 +17,11 @@ document.getElementById('delete-text').addEventListener('keyup', function(event)
  else{
   deleteButton.setAttribute('disabled',true) ;
  }
-})
+}
+
+)
 document.getElementById('apply-button').addEventListener('click', function(){
+
   const deleteDiv = document.getElementById('delete-div')
   deleteDiv.classList.add('hidden')
 })
@@ -93,6 +93,7 @@ function toggle(){
   hideElementById('footer')
   setElementById('popup')
 }
+
 
 
 
