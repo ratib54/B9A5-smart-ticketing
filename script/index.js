@@ -18,6 +18,8 @@ document.getElementById('apply-button').addEventListener('click', function(){
 })
 
 // seats //
+const tableRows = document.querySelectorAll('#dataTable tbody tr');
+let currentIndex = 0;
 let countTime = 0 ;
 document.getElementById('button-container').addEventListener('click', function(event){ 
 if (event.target.classList.contains('a') && countTime < 4) {
@@ -39,6 +41,19 @@ if (event.target.classList.contains('a') && countTime < 4) {
     let leftSeat = parseInt(currentSeatLeft);
     let newAvailableSeat = leftSeat - 1 ;
     leftSeatElement.innerText = newAvailableSeat ;
+
+    // add //
+    if (currentIndex < tableRows.length) {
+      tableRows[currentIndex].classList.remove('hidden');
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+      // Hide all rows again for next iteration
+      for (let i = 0; i < tableRows.length; i++) {
+        tableRows[i].classList.add('hidden');
+      }
+    }
+  
 
     // price //
 

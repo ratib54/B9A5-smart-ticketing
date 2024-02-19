@@ -194,33 +194,37 @@
 <!-- second part -->
   <div class="max-w-[600px]" >
    <h1 class="text-[#030712] text-2xl font-ral font-semibold">Select Your Seat</h1>
-   <table class="border-[1px] w-[433px] ">
-    <tr>
-     <td>Seat <span id="seat-increase">0</span></td>
-     <td>class</td>
-     <td>Price</td>
-    </tr>
-    <tr>
-      <td>A1</td>
-      <td>Economy</td>
-      <td>550</td>
-    </tr>
-    <tr>
-      <td>A2</td>
-      <td>Economy</td>
-      <td>550</td>
-    </tr>
-    <tr>
-      <td>A3</td>
-      <td>Economy</td>
-      <td>550</td>
-    </tr>
-    <tr>
-      <td>A4</td>
-      <td>Economy</td>
-      <td>550</td>
-    </tr>
-   </table>
+   <table id="dataTable" class="border-[1px] w-full">
+    <thead>
+      <tr>
+        <th>Seat <span id="seat-increase">0</span> </th>
+        <th>Class</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hidden">
+        <td>A1</td>
+        <td>Economy</td>
+        <td>550</td>
+      </tr>
+      <tr class="hidden">
+        <td>A2</td>
+        <td>Economy</td>
+        <td>550</td>
+      </tr>
+      <tr class="hidden">
+        <td>A3</td>
+        <td>Economy</td>
+        <td>550</td>
+      </tr>
+      <tr class="hidden">
+        <td>A4</td>
+        <td>Economy</td>
+        <td>550</td>
+      </tr>
+    </tbody>
+  </table>
 
    <div class="flex  justify-between mt-10">
      <p>total number</p>
@@ -228,7 +232,7 @@
    </div>
 
   <!-- input -->
-  <div id="delete-div" class="border mt-10 rounded-xl bg-[#FFFFFF] w-96 ">
+  <div id="delete-div" class="border mt-10 rounded-xl bg-[#FFFFFF] w-96 flex justify-between ">
    <input  class=" px-4 py-1 outline-none text-black " placeholder="have a coupon?" type="text" name="" id="delete-text" > 
    <button id="apply-button" class=" btn m-2 rounded bg-[#1DD100] px-4 py-2 text-white" disabled>Apply</button>
   </div>
