@@ -1,3 +1,12 @@
+// call //
+
+document.getElementById('call').addEventListener('click', function(){
+  document.getElementById('ticket').scrollIntoView();
+})
+
+
+
+
 // coupon part //
 
 document.getElementById('delete-text').addEventListener('keyup', function(event){
@@ -76,6 +85,14 @@ else{
 }
 });
 
+// popup button //
+function toggle(){
+  hideElementById('header')
+  hideElementById('banner')
+  hideElementById('ticket')
+  hideElementById('footer')
+  setElementById('popup')
+}
 
 
 
